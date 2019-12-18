@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -5,7 +6,7 @@ metadata:
   namespace: cloudacademy
   annotations:
     flux.weave.works/tag.flask: glob:develop-v*
-    flux.weave.works/automated: 'true'  
+    flux.weave.works/automated: 'true'
   labels:
     role: frontend
     env: demo
@@ -23,7 +24,7 @@ spec:
       #CODE2.0:
       #add the NGINX container to the pod - configure it to mount the nginx.conf file stored in the nginx-conf configMap 
       - name: nginx
-        image: nginx:1.13.7
+        image: nginx:1.16-perl
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
