@@ -3,6 +3,9 @@ kind: Deployment
 metadata:
   name: frontend
   namespace: cloudacademy
+  annotations:
+    flux.weave.works/tag.flask: glob:develop-v*
+    flux.weave.works/automated: 'true'  
   labels:
     role: frontend
     env: demo
