@@ -36,7 +36,7 @@ spec:
       #CODE2.1:
       #add the FLASK container to the pod
       - name: flask
-        image: docker.io/cloudacademydevops/flaskapp:develop-v1.2.0
+        image: docker.io/cloudacademydevops/flaskapp:develop-v1.3.0
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
